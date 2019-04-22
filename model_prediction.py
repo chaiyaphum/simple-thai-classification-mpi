@@ -3,22 +3,15 @@
 from flask import Flask
 from flask import request
 
-import pandas as pd
-import io
+import json
 import deepcut
-from io import StringIO
-from scipy import sparse
 import pickle
 import numpy as np
+from scipy import sparse
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
-import seaborn as sns
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
 from sklearn.externals import joblib
-import json
 
 stopwords = open('data/stopwords-th_new.txt', 'r', encoding="utf8").read().split()
 print('Stop word list: Done!')
